@@ -6,6 +6,7 @@
     <link rel="icon" href="../public/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="../public/favicon.ico" type="image/ico" />
   </head>
+
   <body>
     <div id="app">
       <header class="top-bar spread">
@@ -61,7 +62,7 @@
                     <label>Quantity:</label>
                   </div>
                   <div class="cell">
-                    <input type="number" v-model="inventory.carrots" />
+                    <input type="number" v-model.number="inventory.carrots" />
                   </div>
                 </div>
               </form>
@@ -97,13 +98,15 @@
                     <label>Quantity:</label>
                   </div>
                   <div class="cell">
-                    <input type="number" v-model="inventory.pineapple" />
+                    <input type="number" v-model.number="inventory.pineapple" />
                   </div>
                 </div>
               </form>
             </div>
             <div class="card-footer">
-              <button class="btn btn-light">Add to cart</button>
+              <button class="btn btn-light" @click='addToCart("pineapple")'>
+                Add to cart
+              </button>
             </div>
           </div>
 
@@ -131,13 +134,15 @@
                     <label>Quantity:</label>
                   </div>
                   <div class="cell">
-                    <input type="number" v-model="inventory.cherries" />
+                    <input type="number" v-model.number="inventory.cherries" />
                   </div>
                 </div>
               </form>
             </div>
             <div class="card-footer">
-              <button class="btn btn-light">Add to cart</button>
+              <button class="btn btn-light" @click='addToCart("cherries")'>
+                Add to cart
+              </button>
             </div>
           </div>
         </div>

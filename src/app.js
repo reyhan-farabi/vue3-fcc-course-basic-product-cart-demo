@@ -6,7 +6,18 @@ let app = Vue.createApp({
         pineapple: 0,
         cherries: 0,
       },
+      cart: {
+        carrots: 0,
+        pineapple: 0,
+        cherries: 0,
+      },
     };
+  },
+  methods: {
+    addToCart(type) {
+      this.cart[type] += this.inventory[type];
+      console.log(this.cart);
+    },
   },
 });
 
